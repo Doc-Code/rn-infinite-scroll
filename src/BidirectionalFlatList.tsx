@@ -8,7 +8,8 @@ import {
   View,
   ViewProps,
 } from 'react-native';
-import { FlatList } from '@stream-io/flat-list-mvcp';
+import BidirectionalFlatlist from "react-native-bidirectional-flatlist";
+
 
 const styles = StyleSheet.create({
   indicatorContainer: {
@@ -284,7 +285,7 @@ export const BidirectionalFlatList = (React.forwardRef(
 
     return (
       <>
-        <FlatList<T>
+        <BidirectionalFlatlist<T>
           {...props}
           onLayout={onLayoutSizeChange}
           onContentSizeChange={realOnContentSizeChange}
